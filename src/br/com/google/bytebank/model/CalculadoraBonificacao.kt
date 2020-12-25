@@ -9,4 +9,14 @@ class CalculadoraBonificacao {
         this.total += funcionario.bonificacao
     }
 
+    //Exemplo didático
+    //Método pode receber qualquer tipo de Classe
+ //   fun registra(funcionario: Any){
+ //       //Valida se o obejto recebido funcionario é do tipo da classe Funcionario
+ //       if (funcionario is Funcionario){
+ //           this.total += funcionario.bonificacao
+ //       }
+ //   }
+
+
 }

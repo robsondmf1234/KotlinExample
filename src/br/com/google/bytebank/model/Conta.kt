@@ -1,8 +1,5 @@
 package br.com.google.bytebank.model
 
-var totalContas = 0
-    private set
-
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
@@ -10,10 +7,15 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
+    //Total sera um membro da classe e não dos objetos
+    companion object{
+        var total = 0
+            private set
+    }
 
     init {
         println("Criando conta.")
-        totalContas++
+        total++
     }
 
     fun deposita(valor: Double) {
