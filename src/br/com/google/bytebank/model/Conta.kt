@@ -1,5 +1,8 @@
 package br.com.google.bytebank.model
 
+var totalContas = 0
+    private set
+
 abstract class Conta(
     var titular: Cliente,
     val numero: Int
@@ -7,10 +10,10 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
-    var total = 0
 
     init {
-        total++
+        println("Criando conta.")
+        totalContas++
     }
 
     fun deposita(valor: Double) {
